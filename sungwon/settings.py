@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'accountapp',
     'sungwon',
     'bootstrap4',
+    'profileapp',
 ]
 
 MIDDLEWARE = [

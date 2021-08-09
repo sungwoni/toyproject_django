@@ -25,7 +25,7 @@ a {
     color: black;
 }
 
-a:hover {
+a:link, a:hover {
     color: black;
     text-decoration: none!important;
 }

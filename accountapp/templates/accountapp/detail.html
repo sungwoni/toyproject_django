@@ -15,7 +15,9 @@
       <h2 style="font-family: 'NanumSquareOTFBold'">
         {{ target_user.profile.nickname }}
           {% if target_user == user %}
-          <a href="{% url 'profileapp:update' pk=target_user.profile.pk %}">
+          <a class="material-icons"
+             style="box-shadow: 0 0 4px #ccc; border-radius: 10rem; padding: .4rem;"
+             href="{% url 'profileapp:update' pk=target_user.profile.pk %}">
           edit
           </a>
           {% endif %}
@@ -40,16 +42,16 @@
 
 <!--      본인 페이지에 본인이 들어왔을 경우 수정해야 함 -->
       {% if target_user == user %}
-      <a href="{% url 'accountapp:update' pk=user.pk %}">
-        <p>
-          Change Info
-        </p>
-      </a>
-      <a href="{% url 'accountapp:delete' pk=user.pk %}">
-        <p>
-          Quit
-        </p>
-      </a>
+          <a class="material-icons"
+             style="box-shadow: 0 0 4px #ccc; border-radius: 10rem; padding: .4rem;"
+             href="{% url 'accountapp:update' pk=user.pk %}">
+              manage_accounts
+          </a>
+          <a class="material-icons"
+             style="box-shadow: 0 0 4px #fcc; border-radius: 10rem; padding: .4rem;"
+             href="{% url 'accountapp:delete' pk=user.pk %}">
+              delete_forever
+          </a>
       {% endif %}
     </div>
 
